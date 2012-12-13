@@ -1,1 +1,21 @@
-/home/doda/.bashrc
+#
+# ~/.bashrc
+#
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+alias ls='ls --color=auto'
+alias less='vimpager'
+PS1='\u@\h [\W] '
+
+pacman() {
+   case $1 in
+       -S | -S[^sih]* | -R* | -U*)
+           /usr/bin/sudo /usr/bin/pacman "$@" ;;
+       *)
+           /usr/bin/pacman "$@" ;;
+   esac
+}
+
+fortune
