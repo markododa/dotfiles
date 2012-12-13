@@ -1,1 +1,72 @@
-/home/doda/.conkyrc
+# ~/.conkyrc
+
+#
+
+# conky configuration file.
+alignment top_right
+background yes
+cpu_avg_samples 2
+color0 7d7d7d
+color1 green
+color2 ffffff
+double_buffer yes
+draw_shades no
+draw_outline no
+draw_borders no
+default_color white
+#draw_graph_borders no
+#default_shade_color cyan
+#default_outline_color cyan
+gap_x 15
+gap_y 15
+#mail_spool $MAIL
+max_text_width 0
+maximum_width 168
+minimum_size 168
+no_buffers yes
+net_avg_samples 2
+out_to_console no
+#own_window yes
+#own_window_type normal
+#own_window_transparent yes
+#own_window_colour cyan
+#own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+stippled_borders 0
+total_run_times 0
+use_xft yes
+use_spacer right
+update_interval 1.0
+uppercase no
+#wm_class_name Conky
+xftfont droid sans mono:size=9
+xftalpha 0.8
+
+
+TEXT
+#TIME
+${font droid sans mono:size=42}${time %H:%M}$font
+
+#${execi 300 weather.sh "EUR|MK|MKXX0001|Skopje"}
+#${execpi 300 python2.7 ~/.gmail.py}
+
+#NET
+DL: ${downspeedf wlan0} KiB/s
+UL: ${upspeedf wlan0} KiB/s
+
+#CPU
+${cpu cpu0}% ${alignr}${cpubar cpu0 8,60}
+
+#MEM
+${memperc}% ${alignr}${membar 8,60}
+${swapperc}% ${alignr}${swapbar 8,60}
+
+#HDD
+root: ${fs_used_perc /}% ${alignr}${fs_bar 8,60 /}
+home: ${fs_used_perc /home}% ${alignr}${fs_bar 8,60 /home}
+
+#MPD
+${if_mpd_playing}${mpd_status}
+$mpd_smart
+$mpd_album $mpd_track
+${mpd_bar}
+${endif}

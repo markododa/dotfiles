@@ -1,1 +1,7 @@
-/home/doda/.gitconfig
+[user]
+	name = Marko Doda
+	email = marko@nesho
+[core]
+	editor = vim
+[credential]
+	helper = cache

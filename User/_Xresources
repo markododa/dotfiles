@@ -1,1 +1,8 @@
-/home/doda/.Xresources
+URxvt.background:       black
+URxvt.foreground:       white
+URxvt.scrollBar_right: true
+URxvt.scrollstyle: plain
+URxvt.font: xft:Monospace:pixelsize=12
+URxvt.perl-ext-common:  default,matcher
+URxvt.urlLauncher:      /usr/bin/firefox
+URxvt.matcher.button:   1

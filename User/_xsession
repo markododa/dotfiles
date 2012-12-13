@@ -1,1 +1,8 @@
-/home/doda/.xsession
+xrdb -load ~/.Xresources &
+setxkbmap $(cat .Xkbmap) &
+xset -b &
+conky &
+parcellite &
+xxkb &
+source ~/.xprofile 
+exec awesome
