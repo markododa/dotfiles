@@ -8,6 +8,7 @@
 alias ls='ls --color=auto'
 alias less='vimpager'
 PS1='\u@\h [\W] '
+complete -cf sudo
 
 pacman() {
    case $1 in
@@ -18,4 +19,9 @@ pacman() {
    esac
 }
 
+bind '"\e[A": history-search-backward'
+bind '"\e[B": history-search-forward'
+
 fortune
+
+
