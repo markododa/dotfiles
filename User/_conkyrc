@@ -21,8 +21,8 @@ gap_x 15
 gap_y 15
 #mail_spool $MAIL
 max_text_width 0
-maximum_width 168
-minimum_size 168
+maximum_width 268
+minimum_size 68
 no_buffers yes
 net_avg_samples 2
 out_to_console no
@@ -38,31 +38,24 @@ use_spacer right
 update_interval 1.0
 uppercase no
 #wm_class_name Conky
-xftfont droid sans mono:size=9
+xftfont droid sans mono:size=12
 xftalpha 0.8
 
 
 TEXT
 #TIME
-${font droid sans mono:size=42}${time %H:%M}$font
+${font droid sans mono:size=64}${time %H:%M}$font
+BAT: ${battery_short} ${alignr}${battery_bar 8,120}
 
-#${execi 300 weather.sh "EUR|MK|MKXX0001|Skopje"}
-#${execpi 300 python2.7 ~/.gmail.py}
+DL:${downspeedf wlp2s0}UL:${upspeedf wlan0}KiB/s
+1: ${cpu cpu0}% ${alignr}${cpubar cpu0 8,120}
+2: ${cpu cpu1}% ${alignr}${cpubar cpu1 8,120}
+RAM: ${memperc}% ${alignr}${membar 8,120}
+#${swapperc}% ${alignr}${swapbar 8,90}
 
-#NET
-DL: ${downspeedf wlan0} KiB/s
-UL: ${upspeedf wlan0} KiB/s
-
-#CPU
-${cpu cpu0}% ${alignr}${cpubar cpu0 8,60}
-
-#MEM
-${memperc}% ${alignr}${membar 8,60}
-${swapperc}% ${alignr}${swapbar 8,60}
-
-#HDD
-root: ${fs_used_perc /}% ${alignr}${fs_bar 8,60 /}
-home: ${fs_used_perc /home}% ${alignr}${fs_bar 8,60 /home}
+HDD
+root: ${fs_used_perc /}% ${alignr}${fs_bar 8,120 /}
+data: ${fs_used_perc /data}% ${alignr}${fs_bar 8,120 /data}
 
 #MPD
 ${if_mpd_playing}${mpd_status}
