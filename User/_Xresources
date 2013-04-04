@@ -6,3 +6,9 @@ URxvt.font: xft:Monospace:pixelsize=12
 URxvt.perl-ext-common:  default,matcher
 URxvt.urlLauncher:      /usr/bin/firefox
 URxvt.matcher.button:   1
+URxvt.depth: 32
+URxvt.background: [75]#000000
+
+!! for "urxvtc -name ncmpcpp -e ncmpcpp"
+ncmpcpp.scrollBar_right: false
+ncmpcpp.scrollBar: false
