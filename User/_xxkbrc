@@ -7,14 +7,12 @@ XXkb.mainwindow.geometry:      18x18+0+0
 XXkb.mainwindow.label.enable:  yes
 XXkb.mainwindow.label.font:    fixed
 ! XXkb.mainwindow.label.font:  -misc-dejavu sans mono-bold-r-normal--14-0-0-0-m-0-ascii-0
-XXkb.mainwindow.label.text.1:  En
-XXkb.mainwindow.label.text.2:  Mk
-
-XXkb.*.border.color:                   #3f3f3f
-XXkb.*.border.width:                   0
-
+XXkb.mainwindow.label.text.1:  EN
+XXkb.mainwindow.label.text.2:  MK
+XXkb.button.enable: false
+XXkb.mainwindow.in_tray: true 
 XXkb.*.label.foreground:               white
-XXkb.*.label.background:               #3f3f3f
+XXkb.*.label.background:               black
 
 XXkb.controls.add_when_start:           yes
 XXkb.controls.add_when_create:          yes
