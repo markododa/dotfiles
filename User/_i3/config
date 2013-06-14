@@ -16,14 +16,16 @@ exec --no-startup-id nitrogen --restore
 
 assign [class="Firefox"] 2:web
 assign [class="Skype"] 3:chat
+for_window [class="Audacious"] floating enable
+for_window [class="Audacious"] border none
+
+#new_window 1pixel 19
+new_float none
 
 workspace_layout tabbed
+workspace_auto_back_and_forth yes
+force_display_urgency_hint 500 ms
 
-# class                 border  backgr. text    indicator
-client.focused          #00006E #00008C #ffffff #2e9ef4
-client.focused_inactive #333333 #323232 #888888 #484e50
-client.unfocused        #483C32 #483C32 #ffffff #292d2e
-client.urgent           #2f343a #900000 #ffffff #900000
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below. ISO 10646 = Unicode
@@ -161,4 +163,13 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         status_command i3status
+    colors {
+        background #000000
+        statusline #ffffff
+
+        focused_workspace  #ffffff #285577
+        active_workspace   #ffffff #333333
+        inactive_workspace #888888 #222222
+        urgent_workspace   #ffffff #900000
+    }
 }
