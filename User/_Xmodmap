@@ -1,3 +1,0 @@
-clear Lock
-keycode 66 = Super_L
-add Mod4 = Super_L
