@@ -43,7 +43,7 @@ bindsym XF86AudioStop exec --no-startup-id mpc -q stop
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 bindsym XF86TouchpadToggle exec synclient TouchpadOff=$(synclient -l | grep -ce TouchpadOff.*0)
 bindsym XF86ScreenSaver exec i3lock
-bindsym XF86Display exec xrandr |grep -q "VGA1 connected" && xrandr --output VGA1 --off || xrandr --output VGA1 --above LVDS1
+bindsym XF86Display exec xrandr |grep -q "VGA1 connected [0-9]*x[0-9]*" && xrandr --output VGA1 --off || xrandr --output VGA1 --above LVDS1 --auto
 bindsym XF86WebCam exec kamoso
 bindsym XF86Launch1 exec konsole
 bindsym $mod+z workspace back_and_forth
